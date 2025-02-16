@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.contrib.auth.models import User # djangon sisään rakennettu käyttäjämalli
 from rest_framework import generics # rest_frameworkin generic views
-from .serializers import UserSerializer, NoteSerializer # tuodaan UserSerializer ja NoteSerializer
+from .serializers import UserSerializer # tuodaan UserSerializer ja NoteSerializer
 from rest_framework.permissions import IsAuthenticated, AllowAny # rest_frameworkin käyttöoikeudet
 
 # luodaan CreateUserView näkymä
