@@ -1,0 +1,15 @@
+from django.contrib.auth.models import User # djangon sisään rakennettu käyttäjämalli
+from rest_framework import serializers # rest_frameworkin serializers
+
+# määritellään UserSerializer, joka perii serializers.ModelSerializer-luokan
+class UserSerializer(serializers.ModelSerializer): 
+    class Meta: # määritellään UserSerializerin meta-luokka
+        model = User # malli, joka serialisoidaan
+        fields = ["id", "username", "password"] # kentät, jotka serialisoidaan
+        extra_kwargs = {"password": {"write_only": True}} # salasanaa ei näytetä serialisoinnin yhteydessä
+
+    # ylikirjoitetaan create-metodi, joka luo uuden käyttäjän
+    def create(self, validated_data):  # validoidut tiedot annetaan parametrina jos käyttäjä on validi
+        print(validated_data) # tulostetaan validoidut tiedot
+        user = User.objects.create_user(**validated_data) # luodaan uusi käyttäjä
+        return user # palautetaan käyttäjä
