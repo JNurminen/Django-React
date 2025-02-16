@@ -10,4 +10,5 @@ urlpatterns = [
     path("api/token/", TokenObtainPairView.as_view(), name="get_token"), # luodaan reitti TokenObtainPairView-näkymälle
     path("api/token/refresh/", TokenRefreshView.as_view(), name="refresh"), # luodaan reitti TokenRefreshView-näkymälle
     path("api-auth/", include("rest_framework.urls")), # lisätään reitti rest_frameworkin oletusnäkymille
+    path("api/", include("api.urls")), # lisätään reitti api-sovelluksen reiteille
 ]
