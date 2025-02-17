@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import api from "../api";
+import Note from "../components/Note";
 import "../styles/Home.css"
 
 // Home sivu joka näyttää kaikki muistiinpanot ja mahdollistaa uuden muistiinpanon luomisen ja vanhan poistamisen
@@ -58,9 +59,9 @@ function Home() {
                     <Note note={note} onDelete={deleteNote} key={note.id} /> // Renderöidään jokainen muistiinpano
                 ))}
             </div>
-            <h2>Create a Note</h2> // Lomake uuden muistiinpanon luomiseen
+            <h2>Create a Note</h2> 
             <form onSubmit={createNote}>
-                <label htmlFor="title">Title:</label>  // Otsikon syöttökenttä
+                <label htmlFor="title">Title:</label>  
                 <br />
                 <input
                     type="text"
@@ -70,7 +71,7 @@ function Home() {
                     onChange={(e) => setTitle(e.target.value)}
                     value={title}
                 />
-                <label htmlFor="content">Content:</label>  // Sisällön syöttökenttä
+                <label htmlFor="content">Content:</label>  
                 <br />
                 <textarea
                     id="content"

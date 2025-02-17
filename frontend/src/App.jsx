@@ -26,7 +26,7 @@ function App() {
         <Route
           path="/"
           element={
-            <ProtectedRoute> // Suojattu reitti, joka ohjaa käyttäjän kirjautumissivulle, jos käyttäjä ei ole kirjautunut
+            <ProtectedRoute> 
               <Home />
             </ProtectedRoute>
           }
