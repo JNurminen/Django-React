@@ -21,7 +21,7 @@ function RegisterAndLogout() {
 // Sovelluksen pääkomponentti
 function App() {
   return (
-    <BrowserRouter> // Reititys 
+    <BrowserRouter> 
       <Routes>
         <Route
           path="/"
