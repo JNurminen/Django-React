@@ -57,6 +57,15 @@ function Form({ route, method }) {
             <button className="form-button" type="submit">
                 {name}
             </button>
+            {method === "login" && (
+            <button
+                className="form-button"
+                type="button"
+                onClick={() => navigate("/register")}
+            >
+                Register
+            </button>
+        )}
         </form>
     );
 }
