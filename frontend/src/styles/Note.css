@@ -1,8 +1,9 @@
 .note-container {
     padding: 10px;
     margin: 20px 0;
-    border: 1px solid #ccc;
+    border: 1px solid #232121;
     border-radius: 5px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
   }
   
   .note-title {
@@ -14,7 +15,7 @@
   }
   
   .note-date {
-    color: #999;
+    color: black;
     font-size: 0.8rem;
   }
   
